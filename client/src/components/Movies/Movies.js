@@ -51,6 +51,8 @@ function Movies() {
       </button>
       {loading ? (
         <div>Loading..</div>
+      ) : list.movies.length === 0 ? (
+        <div>No movies in list</div>
       ) : (
         list.movies.map(movie => <MovieItem key={movie._id} movie={movie} />)
       )}
