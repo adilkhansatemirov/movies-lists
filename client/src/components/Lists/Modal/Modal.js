@@ -15,7 +15,6 @@ function Modal() {
       .post('/api/lists', { listName })
       .then(response => {
         setLists([response.data, ...lists])
-        console.log(response.data)
         setLoading(false)
         setModalVisible(false)
       })

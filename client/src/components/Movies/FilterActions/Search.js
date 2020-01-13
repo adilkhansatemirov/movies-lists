@@ -11,7 +11,6 @@ function Search() {
     )
     const updatedList = { ...list, movies: filtered }
     setList(updatedList)
-    console.log(filtered)
   }
   return (
     <form className="FilterActions__filter">

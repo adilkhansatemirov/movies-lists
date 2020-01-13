@@ -16,11 +16,10 @@ function Modal() {
       .get('/api/lists', { cancelToken: source.token })
       .then(response => {
         setLoading(false)
-        console.log(response.data)
         setLists(response.data)
       })
       .catch(error => {
-        if (axios.isCancel(error)) console.log('Caught cancel request')
+        if (axios.isCancel(error)) console.log('cancel request')
         else throw error
       })
     return () => {

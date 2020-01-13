@@ -35,7 +35,6 @@ function Actions({ movie }) {
         )
         const updatedList = { ...list, movies: updatedMovies }
         setList(updatedList)
-        console.log(response.data)
       })
       .catch(error => {
         throw error

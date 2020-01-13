@@ -19,7 +19,7 @@ function Lists() {
         setLists(response.data)
       })
       .catch(error => {
-        if (axios.isCancel(error)) console.log('Caught cancel request')
+        if (axios.isCancel(error)) console.log('cancel request')
         else throw error
       })
     return () => {
