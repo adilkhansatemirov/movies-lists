@@ -34,4 +34,68 @@ input {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.link-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px;
+  left: 0;
+  font-size: 16px;
+  border: 1px solid $border-green;
+  border-radius: 5px;
+}
+
+.Modal__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.Modal__body {
+  width: 300px;
+  padding: 10px;
+  background: #fff;
+  position: relative;
+  border: 2px solid $border-green;
+  border-radius: 10px;
+}
+
+.Modal__close-button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.Modal__title {
+  font-size: 14px;
+}
+
+.Modal__list-list {
+  margin-top: 10px;
+}
+
+.Modal__input {
+  outline: none;
+  margin-bottom: 3px;
+}
+
+.big-button {
+  width: 100%;
+  background: #fff;
+  margin-left: auto;
+  height: 30px;
+  margin-bottom: 20px;
 }

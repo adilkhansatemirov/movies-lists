@@ -20,7 +20,6 @@ function Modal() {
         setModalVisible(false)
       })
       .catch(error => {
-        setLoading(false)
         throw error
       })
   }
@@ -33,16 +32,22 @@ function Modal() {
     <div className="Modal__background">
       <OutsideAlerter handleClickOutside={() => setModalVisible(false)}>
         <div className="Modal__body">
-          <button onClick={() => setModalVisible(false)}>close</button>
+          <button
+            className="Modal__close-button"
+            onClick={() => setModalVisible(false)}
+          >
+            x
+          </button>
           <h2>Add New List</h2>
           <form onSubmit={handleSubmit}>
             <input
+              className="Modal__input"
               type="text"
               autoFocus
               onChange={event => handleChange(event)}
+              required
             />
-            <button>Add List</button>
-            {loading && <p>loading...</p>}
+            <button disabled={loading}>{loading ? 'wait' : 'add'}</button>
           </form>
         </div>
       </OutsideAlerter>

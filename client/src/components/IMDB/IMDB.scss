@@ -1,0 +1,25 @@
+@import '../../style/variables';
+
+.IMDB__search-form {
+  display: flex;
+  height: 25px;
+}
+
+.IMDB__search-input {
+  flex: 1;
+  outline: none;
+}
+
+.IMDB__search-button {
+  width: 100px;
+  margin-left: 5px;
+}
+
+.IMDB__search-desc {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.IMDB__content {
+  margin-top: 10px;
+}

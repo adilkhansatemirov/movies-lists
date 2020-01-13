@@ -6,10 +6,12 @@ function MovieItem({ movie }) {
   return (
     <div className="MovieItem__container">
       <div className="MovieItem__main">
-        <h4 className="MovieItem__title">{movie.title}</h4>
-        <p>Genre: {movie.genre}</p>
-        <p>Released: {movie.year}</p>
-        <p>Actors: {movie.actors}</p>
+        <div className="MovieItem__info">
+          <h4 className="MovieItem__title">{movie.title}</h4>
+          <p>Genre: {movie.genre}</p>
+          <p>Released: {movie.year}</p>
+          <p>Actors: {movie.actors}</p>
+        </div>
         <Actions movie={movie} />
       </div>
       <img className="MovieItem__poster" src={movie.poster} alt="poster" />

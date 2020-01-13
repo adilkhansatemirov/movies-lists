@@ -43,9 +43,9 @@ function Actions({ movie }) {
   }
 
   return (
-    <div>
+    <div className="MovieItem__action-group">
       <button
-        className={movie.liked ? 'like--liked' : ''}
+        className={`MovieItem__action-item ${movie.liked ? 'like--liked' : ''}`}
         onClick={handleLike}
         disabled={loadingLike}
       >
@@ -54,7 +54,11 @@ function Actions({ movie }) {
         </span>
         {movie.likes}
       </button>
-      <button disabled={loadingDelete} onClick={handleDelete}>
+      <button
+        className="MovieItem__action-item"
+        disabled={loadingDelete}
+        onClick={handleDelete}
+      >
         {loadingDelete ? 'wait' : 'Delete'}
       </button>
     </div>

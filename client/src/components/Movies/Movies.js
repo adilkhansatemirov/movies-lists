@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { MoviesContext } from './context/movies'
 import MovieItem from './MovieItem/MovieItem'
 import FilterActions from './FilterActions/FilterActions'
@@ -21,7 +21,6 @@ function Movies() {
         setLoading(false)
       })
       .catch(error => {
-        setLoading(false)
         if (axios.isCancel(error)) console.log('Caught cancel request')
         else throw error
       })
@@ -32,7 +31,12 @@ function Movies() {
 
   return (
     <div>
-      <h1 className="page-title">Movies</h1>
+      <h1 className="page-title">
+        <Link className="link-back" to="/">
+          To Lists
+        </Link>{' '}
+        Movies
+      </h1>
       <div className="Movies__subtitle-group">
         <h3 className="Movies__subtitle">List: {!loading && list.title}</h3>
         <h3 className="Movies__subtitle">
@@ -40,6 +44,11 @@ function Movies() {
         </h3>
       </div>
       <FilterActions />
+      <button className="big-button">
+        <Link to="/IMDB" className="link Lists__link">
+          Add Movie
+        </Link>
+      </button>
       {loading ? (
         <div>Loading..</div>
       ) : (

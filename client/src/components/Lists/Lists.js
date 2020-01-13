@@ -34,8 +34,8 @@ function Lists() {
   return (
     <div>
       <h1 className="page-title">My Lists</h1>
-      <button className="Lists__browse-link">
-        <Link to="/IMDB" className="Lists__link">
+      <button className="big-button">
+        <Link to="/IMDB" className="link Lists__link">
           Browse Movies
         </Link>
       </button>

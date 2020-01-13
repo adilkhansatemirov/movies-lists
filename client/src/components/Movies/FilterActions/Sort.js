@@ -18,7 +18,6 @@ function Sort() {
         setLoading(false)
       })
       .catch(error => {
-        setLoading(false)
         throw error
       })
   }

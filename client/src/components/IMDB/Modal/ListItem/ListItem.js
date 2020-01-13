@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import './ListItem.scss'
 
 function ListItem({ list, movie }) {
   const [contains, setContains] = useState(false)
@@ -17,7 +18,6 @@ function ListItem({ list, movie }) {
         console.log(response.data)
       })
       .catch(error => {
-        setLoading(false)
         if (axios.isCancel(error)) console.log('Caught cancel request')
         else throw error
       })
@@ -35,13 +35,12 @@ function ListItem({ list, movie }) {
         setLoading(false)
       })
       .catch(error => {
-        setLoading(false)
         throw error
       })
   }
 
   return (
-    <li className="Modal__list-item">
+    <li className="ListItem__item">
       <p>{list.title}</p>
       <button disabled={contains || loading} onClick={handleAdd}>
         {loading ? 'wait' : `${contains ? 'already there' : 'add'}`}
