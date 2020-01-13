@@ -1,0 +1,28 @@
+button,
+.button {
+  background: #b9ffed;
+  border: 1px solid $border-green;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s all;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button:disabled,
+.button--disabled {
+  pointer-events: none;
+  background: #ccc;
+  border: 1px solid #eee;
+}
+
+button:hover,
+.button:hover {
+  background: #fff;
+}
+
+button:active,
+.button:active {
+  background: $border-green;
+  transform: scale(0.95);
+}

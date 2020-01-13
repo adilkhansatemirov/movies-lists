@@ -1,0 +1,55 @@
+@import '../../style/variables';
+@import '../../style/buttons';
+
+.Lists__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Lists__item {
+  width: 290px;
+  height: 100px;
+  font-size: 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-green;
+  margin-bottom: 30px;
+  background: lighten($border-green, 47%);
+}
+
+.Lists__browse-link {
+  width: 100%;
+  background: #fff;
+  margin-left: auto;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.Lists__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Lists__action-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.Lists__action-item {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+.Lists__action-item:active {
+  transform: none;
+}

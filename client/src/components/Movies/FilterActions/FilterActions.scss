@@ -1,0 +1,24 @@
+@import '../../../style/variables';
+
+.FilterActions__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.FilterActions__sort,
+.FilterActions__filter {
+  display: flex;
+  align-items: flex-start;
+}
+
+.FilterActions__sort-select {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid $border-green;
+  border-radius: 5px;
+}
+
+.FilterActions__filter-input {
+  margin-left: 5px;
+}

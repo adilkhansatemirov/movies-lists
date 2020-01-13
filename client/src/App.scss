@@ -1,0 +1,37 @@
+@import 'style/variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  padding: 2px;
+  border-radius: 3px;
+  border: 1px solid $border-green;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text--green {
+  background: #d7fff5;
+  color: #00271d;
+}
+
+.page-title {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
